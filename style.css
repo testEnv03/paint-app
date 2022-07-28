@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap');
+*{
+    font-family: 'Balsamiq Sans', cursive;
+    margin: 0;
+    padding: 0;
+}
+body{
+    overflow: hidden;
+}
+::-webkit-scrollbar { display: none; }
+.menu{
+    position: absolute;
+    display: flex;
+    top: 20px;
+    left: 20px;
+    border-radius: 20px;
+    transition: background-color, color .5s ease;
+}
+.helpMenu{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    height: 50px;
+    width: 50px;
+    overflow: hidden;
+    border-radius: 20px;
+    z-index: 2;
+    padding: 10px;
+    transition: all 1s ease;
+}
+.helpMenu i:hover{
+    background-color: rgba(179, 179, 179, 0.767);
+    cursor: pointer;
+}
+.helpOpen{
+    height: 400px;
+    width: 700px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.helpOpen i{
+    float: right;
+}
+.helpOpen ul li{
+    margin: 20px;
+    font-size: 1.3rem;
+    list-style: none;
+}
+.navItems{
+    display: flex;
+    padding: 5px;
+    list-style: none;
+    transition: background-color .5s ease;
+}
+.navItems li, .helpMenu i{
+    border-radius: 100%;
+    margin: 5px;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    padding: 5px;
+}
+#hamburger{
+    border-radius: 10px;
+}
+.navItems li:hover{
+    background-color: rgba(179, 179, 179, 0.767);
+    cursor: pointer;
+}
+.itemOptions{
+    background-color: rgba(102, 100, 100, 0.295);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    animation-name: opacity;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    overflow: hidden;
+}
+@keyframes opacity{ to{ opacity: 1; }}
+.itemOptions li{
+    list-style: none;
+    padding: 10px 20px;
+}
+.itemOptions li i{
+    margin-right: 10px;
+    pointer-events: none;
+}
+.itemOptions li:hover{
+    background-color:#949494;
+    cursor: pointer;
+}
+.artboard{
+    height: 100vh;
+    width: 100vw;
+    transition: background-color .5s ease;
+}
+.activeTool{
+    background-color: rgba(179, 179, 179, 0.767);
+}
+.colorPicker{
+    border: none;
+}
+#openOptions{
+    padding: 0;
+}
+#openOptions select{
+    height: 100%;
+    width: 100%;
+    padding: 10px 20px;
+    background-color: rgb(102, 100, 100);
+    font-size: 1rem;
+    color: white;
+    outline: none;
+}
+#stroke-width{
+    width: auto;
+}
+#stroke-width:hover{
+    background-color: initial;
+}
+svg text{
+    user-select: none;
+
+}
+svg *{
+    transform-box: fill-box;
+    transform-origin: center;
+}
+#textInput{
+    border-radius: 40px;
+    border: none;
+    padding: 5px 10px;
+    outline: none;
+}
+@media print {
+    .menu{
+        display: none;
+    }
+}
+
+
+.clearBtn{
+    padding: 4px 24px;
+    background-color: #FFC4C4;
+    color: #A10035;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+.saveBtn{
+    padding: 4px 24px;
+    background-color: #CDF0EA;
+    color: #14C38E;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    margin-right: 1rem;
+}
+
+/* .saveBtn:active { */
+    /* transform: translateY(4px); */
+    /* Moving button 4px to y-axis */
+/* } */
+
+.saveBtn:hover {
+    box-shadow: 0px 15px 25px -5px #14C38E;
+    transform: scale(1.03);
+  }
+  .saveBtn:active {
+    box-shadow: 0px 4px 8px #14C38E;
+    transform: scale(0.98);
+  }
+.clearBtn:hover {
+    box-shadow: 0px 15px 25px -5px #A10035;
+    transform: scale(1.03);
+  }
+  .clearBtn:active {
+    box-shadow: 0px 4px 8px #A10035;
+    transform: scale(0.98);
+  }
