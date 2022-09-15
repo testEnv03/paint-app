@@ -1,10 +1,6 @@
-# WebDraw
+# Paint Application
 
-[![N|Solid](https://vuejs.org/images/logo.png)](https://nodesource.com/products/nsolid)
-
-
-
-WebDraw is web based drawing tool made with JavaScript (vue.js) which contain following features
+The above application is web based drawing tool made with JavaScript (vue.js) which contain following features
 
   - Pencil
   - Line
@@ -14,16 +10,10 @@ WebDraw is web based drawing tool made with JavaScript (vue.js) which contain fo
   - Text
   - Image
 
-# New Features!
+The above paint application is for testing save and restore feature with API.
+# Following all the features are valid inside iFrame only
 
-  - Rotate last element with ← → keys
-  - Move last element with w, a, s, d keys
-  - Undo with CTRL+Z
-  - Save with CTRL+S
-  - Border radius of rectangle can be adjust with up/down keys
-
-
-You can also:
-  - Import and export files .drw(draw) extension
-  - Save your art from localstorage and open that
-  - Change theme dark/light
+## Observation
+- If any drawing is available on page and save button is clicked then drawing will be saved to the API.
+- After saving drawing, any change is made and waypoint is switched then returning to the same waypoint, the page will ask if saved drawing is required or the last state is required where changes were not saved.
+- On clicking close button the API will clear all the saved diagram and page will be rendered as initial rendering.

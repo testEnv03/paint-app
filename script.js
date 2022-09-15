@@ -265,7 +265,8 @@ const app = new Vue({
 
 document.addEventListener("keydown", app.keydown);
 
-var rrsAPI = 'http://localhost:5007/api/v1/Runtime'
+// var rrsAPI = 'http://localhost:5007/api/v1/Runtime'
+var rrsAPI = 'http://localhost/RestRuleServices/api/v1/Runtime'
 var valueUpdated = false
 var isSessionCleared = false
 let isDataSaved = false
